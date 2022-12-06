@@ -5,8 +5,7 @@ pyDatalog.create_terms('X,Z,res,Sum,Average,random_sum')
 
 big_number = 888888 
 
-print("big_number = ")
-print(big_number)
+print(f'big_number = {big_number} ')
 
 # Сумма арифмитической прогрессии 
 Sum[X] = ((1 + X) * X) / 2
