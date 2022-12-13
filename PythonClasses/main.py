@@ -13,12 +13,6 @@ class Printing:
         self.__name = "Alenvic" 
         self.__year = 5
 
-
-    def print(self):
-        print("Name:", self.__name)
-        print("Year:", self.__year)
-
-
     def json_load(self, json_filepath: str):
         with open(json_filepath) as f:
             obj = json.load(f)
@@ -40,11 +34,6 @@ class Magazine(Printing):
     def __init__(self):
         super().__init__()
         self.__date = datetime.datetime(2000, 1, 1)
-
-
-    def print(self):
-        super().print()
-        print("Date:", self.__date)
 
 
     def json_load(self, json_filepath: str):
@@ -79,11 +68,6 @@ class Book(Printing):
         self.__genre = "genre"
 
 
-    def print(self):
-        super().print()
-        print("Genre:", self.__genre)
-
-
     def json_load(self, json_filepath: str):
         with open(json_filepath) as f:
             obj = json.load(f)
@@ -106,11 +90,6 @@ class Schoolbook(Book):
     def __init__(self):
         super().__init__()
         self.__subject = "subject"
-
-
-    def print(self):
-        super().print()
-        print("Subject:", self.__subject)
 
 
     def json_load(self, json_filepath: str):
